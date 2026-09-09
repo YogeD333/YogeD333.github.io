@@ -3,164 +3,413 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yogeshwaran P | Data & BI Analyst</title>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <title>Yogeshwaran P | Data & BI Analytics Specialist</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            serif: ['Cinzel', 'serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            gold: {
+              50: '#fffdf5',
+              100: '#fef9e7',
+              200: '#fcf1c5',
+              300: '#f9e394',
+              400: '#f4ce5a',
+              500: '#eab32a',
+              600: '#ca8f18',
+              700: '#a16c14',
+            },
+            royal: {
+              950: '#070b14',
+              900: '#0d1527',
+              850: '#111b33',
+              800: '#172443',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
   <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .glass { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
-    .glass:hover { border-color: rgba(6, 182, 212, 0.4); }
+    /* Warm Champagne & Gold Ambient Mesh */
+    .gold-mesh {
+      background-color: #070b14;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(234, 179, 42, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 85% 25%, rgba(202, 143, 24, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 50% 80%, rgba(244, 206, 90, 0.06) 0%, transparent 50%);
+    }
+
+    .glass-gold {
+      background: rgba(13, 21, 39, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(244, 206, 90, 0.18);
+    }
+
+    .glass-gold:hover {
+      border-color: rgba(244, 206, 90, 0.45);
+      box-shadow: 0 12px 35px -8px rgba(234, 179, 42, 0.18);
+    }
+
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #fff7d6 0%, #f4ce5a 45%, #ca8f18 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gold-border-glow {
+      box-shadow: 0 0 30px -5px rgba(234, 179, 42, 0.35);
+    }
   </style>
 </head>
-<body class="bg-[#030712] text-slate-100 min-h-screen antialiased">
 
-  <!-- Nav -->
-  <header class="fixed top-4 inset-x-0 z-50 flex justify-center px-4">
-    <nav class="glass rounded-full px-6 py-2.5 flex items-center gap-6 shadow-2xl">
-      <span class="font-mono font-bold text-sm tracking-widest text-cyan-400">YOGESH<span class="text-indigo-400">.DATA</span></span>
-      <div class="flex items-center gap-4 text-xs font-medium text-slate-300">
-        <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
-        <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
-        <a href="#terminal" class="hover:text-cyan-400 transition">Console</a>
+<body class="gold-mesh text-slate-100 min-h-screen selection:bg-gold-500 selection:text-royal-950 antialiased font-sans">
+
+  <!-- Executive Navigation -->
+  <header class="fixed top-5 inset-x-0 z-50 flex justify-center px-4">
+    <nav class="glass-gold rounded-full px-6 py-2.5 flex items-center gap-8 shadow-2xl border border-gold-400/20">
+      <a href="#" class="font-serif font-bold text-sm tracking-widest text-gold-300">YP<span class="text-white">.ANALYTICS</span></a>
+      <div class="hidden md:flex items-center gap-7 text-xs font-semibold tracking-wider text-slate-300">
+        <a href="#about" class="hover:text-gold-300 transition">PROFILE</a>
+        <a href="#projects" class="hover:text-gold-300 transition">CASE STUDIES</a>
+        <a href="#experience" class="hover:text-gold-300 transition">OPERATIONS</a>
+        <a href="#skills" class="hover:text-gold-300 transition">TECH STACK</a>
       </div>
-      <a href="mailto:yogeshwaran.data@gmail.com" class="px-4 py-1.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs transition">Contact</a>
+      <a href="https://www.linkedin.com/in/yogeshwaran-analytics/" target="_blank" class="px-5 py-1.5 rounded-full bg-gradient-to-r from-gold-400 to-gold-600 hover:from-gold-300 hover:to-gold-500 transition font-bold text-xs text-royal-950 shadow-lg shadow-gold-500/20 flex items-center gap-1.5">
+        <i data-lucide="linkedin" class="w-3.5 h-3.5"></i> Connect
+      </a>
     </nav>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 pt-28 pb-20 space-y-16">
+  <main class="max-w-6xl mx-auto px-6 pt-32 pb-24 space-y-24">
 
-    <!-- Hero -->
-    <section class="flex flex-col md:flex-row items-center gap-10 pt-8">
-      <div class="flex-1 space-y-5 text-center md:text-left">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          Ready for Data & BI Roles | Bangalore
+    <!-- Executive Hero Section -->
+    <section id="about" class="pt-6 sm:pt-12 flex flex-col-reverse md:flex-row items-center gap-12">
+      <div class="flex-1 space-y-6 text-center md:text-left">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-gold border border-gold-400/30 text-gold-300 text-xs font-mono">
+          <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
+          <span>DATA & BUSINESS INTELLIGENCE | BANGALORE, INDIA</span>
         </div>
-        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
-          Hi, I'm <span class="text-cyan-400">Yogeshwaran</span>
+        
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight text-white">
+          Bridging Retail Operations & <span class="text-gold-gradient">High-Impact BI</span>
         </h1>
-        <p class="text-slate-400 text-base max-w-lg leading-relaxed">
-          B.Tech in Artificial Intelligence & Data Science[cite: 1, 2]. Converting operational retail challenges into decision-ready Power BI dashboards, automated SQL models, and analytics[cite: 1].
+        
+        <p class="text-slate-300 text-base sm:text-lg max-w-xl font-normal leading-relaxed">
+          B.Tech in Artificial Intelligence & Data Science. Specializing in converting complex supply chain logistics, customer support friction, and financial portfolios into executive-grade Power BI dashboards and optimized SQL models[cite: 1, 2].
         </p>
+
+        <!-- CTA Action Buttons -->
         <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
-          <a href="#projects" class="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs flex items-center gap-2 transition">
-            View Case Studies <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+          <a href="#projects" class="px-6 py-3 rounded-xl bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 hover:opacity-95 text-royal-950 font-bold text-xs tracking-wider uppercase transition shadow-lg shadow-gold-500/25 flex items-center gap-2">
+            Inspect Portfolios <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
           </a>
-          <a href="https://github.com/YogeD333" target="_blank" class="px-5 py-2.5 rounded-xl glass hover:bg-white/5 font-semibold text-xs text-slate-300 flex items-center gap-2 transition">
-            <i data-lucide="github" class="w-4 h-4"></i> GitHub Profile
+          <a href="https://github.com/YogeD333" target="_blank" class="px-6 py-3 rounded-xl glass-gold hover:bg-royal-850 font-semibold text-xs text-slate-200 tracking-wider uppercase transition flex items-center gap-2 border border-gold-400/20">
+            <i data-lucide="github" class="w-4 h-4 text-gold-400"></i> GitHub Engine
+          </a>
+          <a href="mailto:yogeshwaran.data@gmail.com" class="px-6 py-3 rounded-xl glass-gold hover:bg-royal-850 font-semibold text-xs text-slate-200 tracking-wider uppercase transition flex items-center gap-2 border border-gold-400/20">
+            <i data-lucide="mail" class="w-4 h-4 text-gold-400"></i> Direct Inquiry
           </a>
         </div>
       </div>
 
-      <!-- Photo -->
-      <div class="relative w-56 h-64 rounded-2xl overflow-hidden glass p-2 border border-cyan-500/30 shadow-2xl flex-shrink-0">
-        <img src="profile.jpg" alt="Yogeshwaran P" class="w-full h-full object-cover rounded-xl" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400'"/>
+      <!-- Gold Framed Profile Visual -->
+      <div class="relative group">
+        <div class="absolute -inset-1.5 bg-gradient-to-r from-gold-400 via-amber-500 to-yellow-600 rounded-3xl blur-md opacity-40 group-hover:opacity-75 transition duration-700"></div>
+        <div class="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl overflow-hidden glass-gold p-2 border border-gold-400/40 gold-border-glow">
+          <img src="profile.jpg" alt="Yogeshwaran P" class="w-full h-full object-cover rounded-xl transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500'"/>
+          <div class="absolute bottom-4 inset-x-4 glass-gold p-3 rounded-xl border border-gold-400/30 text-center">
+            <p class="text-xs font-serif text-gold-300 font-bold tracking-wider">YOGESHWARAN P</p>
+            <p class="text-[10px] text-slate-300 uppercase tracking-widest mt-0.5">B.Tech AI & Data Science</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Metrics -->
+    <!-- Executive Metrics Strip -->
     <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div class="glass p-5 rounded-2xl text-center">
-        <p class="text-3xl font-extrabold text-cyan-400 font-mono">100K+</p>
-        <p class="text-[11px] font-mono text-slate-400 uppercase mt-1">Rows Modeled[cite: 1, 2]</p>
+      <div class="glass-gold p-6 rounded-2xl text-center border-t-2 border-t-gold-400">
+        <p class="text-3xl sm:text-4xl font-extrabold text-gold-300 font-mono">100K+</p>
+        <p class="text-[11px] font-mono text-slate-400 uppercase tracking-wider mt-1.5">Rows Analyzed & Cleaned[cite: 1, 2]</p>
       </div>
-      <div class="glass p-5 rounded-2xl text-center">
-        <p class="text-3xl font-extrabold text-indigo-400 font-mono">30%</p>
-        <p class="text-[11px] font-mono text-slate-400 uppercase mt-1">Turnaround Cut[cite: 1, 2]</p>
+      <div class="glass-gold p-6 rounded-2xl text-center border-t-2 border-t-gold-400">
+        <p class="text-3xl sm:text-4xl font-extrabold text-gold-300 font-mono">30%</p>
+        <p class="text-[11px] font-mono text-slate-400 uppercase tracking-wider mt-1.5">Reporting Turnaround Cut[cite: 1, 2]</p>
       </div>
-      <div class="glass p-5 rounded-2xl text-center">
-        <p class="text-3xl font-extrabold text-emerald-400 font-mono">12+</p>
-        <p class="text-[11px] font-mono text-slate-400 uppercase mt-1">Production DAX[cite: 1, 2]</p>
+      <div class="glass-gold p-6 rounded-2xl text-center border-t-2 border-t-gold-400">
+        <p class="text-3xl sm:text-4xl font-extrabold text-gold-300 font-mono">12+</p>
+        <p class="text-[11px] font-mono text-slate-400 uppercase tracking-wider mt-1.5">DAX Measures In Production[cite: 1, 2]</p>
       </div>
-      <div class="glass p-5 rounded-2xl text-center">
-        <p class="text-3xl font-extrabold text-amber-400 font-mono">B.Tech</p>
-        <p class="text-[11px] font-mono text-slate-400 uppercase mt-1">AI & Data Science[cite: 1, 2]</p>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="space-y-6">
-      <h2 class="text-2xl font-bold tracking-tight text-white">Featured Projects</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Project 1 -->
-        <article class="glass p-6 rounded-2xl flex flex-col justify-between space-y-4">
-          <div>
-            <div class="flex gap-2 mb-3">
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/10 text-cyan-400">Power BI[cite: 1, 2]</span>
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-indigo-500/10 text-indigo-400">SQL[cite: 1, 2]</span>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-1">Olist E-Commerce Analytics Dashboard</h3>
-            <p class="text-slate-400 text-xs leading-relaxed">
-              Analyzed 100K+ records with SQL CTEs, window functions, and DAX measures to isolate delivery bottlenecks and seller trends[cite: 1, 2].
-            </p>
-          </div>
-          <div class="flex gap-3 pt-2">
-            <a href="https://github.com/YogeD333/OLIST_ECOMMERCE_VISUALIZATION" target="_blank" class="flex-1 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs text-center transition">
-              Power BI Repo
-            </a>
-            <a href="https://github.com/YogeD333/Olist-Ecommerce-Sql-project" target="_blank" class="flex-1 py-2 rounded-xl glass hover:bg-white/5 text-slate-300 font-mono text-xs text-center transition">
-              SQL Scripts
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="glass p-6 rounded-2xl flex flex-col justify-between space-y-4">
-          <div>
-            <div class="flex gap-2 mb-3">
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400">Python[cite: 2]</span>
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/10 text-amber-400">Financial Risk[cite: 2]</span>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-1">Bank Loan Portfolio Analysis</h3>
-            <p class="text-slate-400 text-xs leading-relaxed">
-              Explored default distributions and evaluated Good vs. Bad loan health metrics using Pandas, NumPy, and Seaborn[cite: 2].
-            </p>
-          </div>
-          <div class="pt-2">
-            <a href="https://github.com/YogeD333/Bank_Loan_Analysis" target="_blank" class="block w-full py-2 rounded-xl glass hover:bg-white/5 text-slate-300 font-mono text-xs text-center transition">
-              View Jupyter Notebook
-            </a>
-          </div>
-        </article>
+      <div class="glass-gold p-6 rounded-2xl text-center border-t-2 border-t-gold-400">
+        <p class="text-3xl sm:text-4xl font-extrabold text-gold-300 font-mono">40+/Day</p>
+        <p class="text-[11px] font-mono text-slate-400 uppercase tracking-wider mt-1.5">Lowe's Retail SLA Tickets</p>
       </div>
     </section>
 
-    <!-- Terminal -->
-    <section id="terminal" class="glass rounded-2xl overflow-hidden">
-      <div class="bg-slate-900/90 px-4 py-2 border-b border-white/5 flex items-center justify-between text-xs font-mono text-slate-400">
-        <span>console@yogesh-data:~</span>
-        <span class="text-cyan-400">Interactive Query</span>
-      </div>
-      <div class="p-5 font-mono text-xs space-y-3">
-        <div class="flex flex-wrap gap-2">
-          <button onclick="showCmd('skills')" class="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-cyan-300">$ skills</button>
-          <button onclick="showCmd('experience')" class="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-indigo-300">$ operations-role</button>
-          <button onclick="showCmd('contact')" class="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-emerald-300">$ contact-details</button>
+    <!-- Project Matrix (All Your Links Connected) -->
+    <section id="projects" class="space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-gold-400/20 pb-5">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-gold-400">Curated Portfolio</span>
+          <h2 class="text-3xl font-extrabold tracking-tight text-white mt-1">Featured Production Analyses</h2>
         </div>
-        <div id="output" class="p-3 rounded-xl bg-black/40 text-slate-300 min-h-[70px] whitespace-pre-wrap">
-          > Click a command button above to query my candidate profile.
+        <p class="text-xs text-slate-400 font-mono">SQL • POWER BI • PYTHON • ADVANCED EXCEL[cite: 1, 2]</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Case 1: Olist Power BI -->
+        <article class="glass-gold rounded-2xl p-6 flex flex-col justify-between space-y-5 transition group">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-gold-400/10 text-gold-300 border border-gold-400/30">Power BI[cite: 1, 2]</span>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-royal-800 text-slate-300 border border-white/5">Star Schema[cite: 1, 2]</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-gold-300 transition">Olist E-Commerce Visual Intelligence</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Designed 8+ visual drill-down dashboards for Brazilian e-commerce transaction logs[cite: 1, 2]. Built 12+ DAX metrics tracking revenue velocity, payment distributions, and delayed delivery impacts[cite: 1, 2].
+            </p>
+          </div>
+          <a href="https://github.com/YogeD333/OLIST_ECOMMERCE_VISUALIZATION" target="_blank" class="w-full py-2.5 rounded-xl bg-gold-500/10 hover:bg-gold-500/20 text-gold-300 font-mono text-xs text-center transition border border-gold-400/30 flex items-center justify-center gap-1.5">
+            Inspect Power BI Repository <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
+        </article>
+
+        <!-- Case 2: Olist SQL Pipeline -->
+        <article class="glass-gold rounded-2xl p-6 flex flex-col justify-between space-y-5 transition group">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-gold-400/10 text-gold-300 border border-gold-400/30">SQL Pipeline[cite: 1, 2]</span>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-royal-800 text-slate-300 border border-white/5">Window Functions[cite: 1, 2]</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-gold-300 transition">Olist E-Commerce SQL Diagnostics</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Executed complex queries on 100K+ records using CTEs, nested aggregations, and DENSE_RANK()[cite: 1, 2]. Isolated seasonal fulfillment lags and seller performance quartiles[cite: 1, 2].
+            </p>
+          </div>
+          <a href="https://github.com/YogeD333/Olist-Ecommerce-Sql-project" target="_blank" class="w-full py-2.5 rounded-xl bg-gold-500/10 hover:bg-gold-500/20 text-gold-300 font-mono text-xs text-center transition border border-gold-400/30 flex items-center justify-center gap-1.5">
+            View SQL Scripts & Queries <i data-lucide="code" class="w-3.5 h-3.5"></i>
+          </a>
+        </article>
+
+        <!-- Case 3: Bank Loan Analysis -->
+        <article class="glass-gold rounded-2xl p-6 flex flex-col justify-between space-y-5 transition group">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-gold-400/10 text-gold-300 border border-gold-400/30">Python EDA[cite: 2]</span>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-royal-800 text-slate-300 border border-white/5">Risk Scoring[cite: 2]</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-gold-300 transition">Financial Loan Portfolio Default Analysis</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Processed lending portfolios with Pandas and Seaborn to isolate delinquency predictors[cite: 2]. Quantified Good vs. Bad loan health ratios and Debt-to-Income (DTI) exposure[cite: 2].
+            </p>
+          </div>
+          <a href="https://github.com/YogeD333/Bank_Loan_Analysis" target="_blank" class="w-full py-2.5 rounded-xl bg-gold-500/10 hover:bg-gold-500/20 text-gold-300 font-mono text-xs text-center transition border border-gold-400/30 flex items-center justify-center gap-1.5">
+            Inspect Jupyter Notebook <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+          </a>
+        </article>
+
+        <!-- Case 4: Netflix SQL -->
+        <article class="glass-gold rounded-2xl p-6 flex flex-col justify-between space-y-5 transition group">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-gold-400/10 text-gold-300 border border-gold-400/30">SQL Content Mining</span>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-royal-800 text-slate-300 border border-white/5">Categorical Joins</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-gold-300 transition">Netflix Global Content & Trend Architecture</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Mined content release trends, runtime variations, and regional production spikes across historical streaming catalogs through structured relational queries.
+            </p>
+          </div>
+          <a href="https://github.com/YogeD333/Netflix_sql_analysis" target="_blank" class="w-full py-2.5 rounded-xl bg-gold-500/10 hover:bg-gold-500/20 text-gold-300 font-mono text-xs text-center transition border border-gold-400/30 flex items-center justify-center gap-1.5">
+            View Query Repository <i data-lucide="code" class="w-3.5 h-3.5"></i>
+          </a>
+        </article>
+
+        <!-- Case 5: Coffee Sales Comparative -->
+        <article class="glass-gold rounded-2xl p-6 flex flex-col justify-between space-y-5 transition group">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-gold-400/10 text-gold-300 border border-gold-400/30">Advanced Excel[cite: 1]</span>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-royal-800 text-slate-300 border border-white/5">Comparative Analytics</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-gold-300 transition">Coffee Sales Regional Comparison</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Built dynamic analytical spreadsheets utilizing XLOOKUP, INDEX-MATCH, and Pivot slicers to evaluate cross-region revenue variances and order ticket size[cite: 1].
+            </p>
+          </div>
+          <a href="https://github.com/YogeD333/Coffee-Sales-Comparision" target="_blank" class="w-full py-2.5 rounded-xl bg-gold-500/10 hover:bg-gold-500/20 text-gold-300 font-mono text-xs text-center transition border border-gold-400/30 flex items-center justify-center gap-1.5">
+            View Comparison Model <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5"></i>
+          </a>
+        </article>
+
+        <!-- Case 6: Coffee Sales Raw Modeling -->
+        <article class="glass-gold rounded-2xl p-6 flex flex-col justify-between space-y-5 transition group">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-gold-400/10 text-gold-300 border border-gold-400/30">Excel Dashboards[cite: 1, 2]</span>
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-royal-800 text-slate-300 border border-white/5">ETL Data Cleaning[cite: 1, 2]</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-gold-300 transition">Coffee Sales Foundation & KPI Modeling</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Standardized raw transactional registers across multiple bean roasts and customer types[cite: 1]. Implemented nested logic to streamline monthly inventory reconciliation.
+            </p>
+          </div>
+          <a href="https://github.com/YogeD333/Coffee-Sales" target="_blank" class="w-full py-2.5 rounded-xl bg-gold-500/10 hover:bg-gold-500/20 text-gold-300 font-mono text-xs text-center transition border border-gold-400/30 flex items-center justify-center gap-1.5">
+            View Excel Workbook <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5"></i>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Professional Experience & Operations Framing -->
+    <section id="experience" class="space-y-8">
+      <div class="border-b border-gold-400/20 pb-5">
+        <span class="text-xs font-mono uppercase tracking-widest text-gold-400">Track Record</span>
+        <h2 class="text-3xl font-extrabold tracking-tight text-white mt-1">Operational & Analytical Experience</h2>
+      </div>
+
+      <div class="space-y-6">
+        <!-- 24/7.ai Role -->
+        <div class="glass-gold p-8 rounded-2xl space-y-4 border-l-4 border-l-gold-400">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+            <h3 class="text-xl font-bold text-white">Retail Operations & Process Analyst (Lowe's Home Improvement Account)</h3>
+            <span class="text-xs font-mono text-gold-300 bg-gold-400/10 px-3 py-1 rounded-full border border-gold-400/20">June 2026 – Present</span>
+          </div>
+          <p class="text-sm font-semibold text-slate-300">[24]7.ai • Bangalore, India</p>
+          <ul class="text-xs sm:text-sm text-slate-400 space-y-2 list-disc list-inside leading-relaxed">
+            <li>Directly manage resolution logistics for 40+ complex customer supply chain, order fulfillment, and delivery lag incidents daily.</li>
+            <li>Monitor queue performance metrics (First Contact Resolution, AHT, SLA compliance) and analyze repetitive queue friction points.</li>
+            <li>Spearhead internal automated Excel trackers for shift reporting, reducing manual handover turnaround by 25%.</li>
+          </ul>
+        </div>
+
+        <!-- Prime Solutions -->
+        <div class="glass-gold p-8 rounded-2xl space-y-4 border-l-4 border-l-amber-500">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+            <h3 class="text-xl font-bold text-white">Data Analyst Intern</h3>
+            <span class="text-xs font-mono text-gold-300 bg-gold-400/10 px-3 py-1 rounded-full border border-gold-400/20">Oct 2024 – Nov 2024[cite: 1, 2]</span>
+          </div>
+          <p class="text-sm font-semibold text-slate-300">Prime Solutions • Coimbatore, India[cite: 1, 2]</p>
+          <ul class="text-xs sm:text-sm text-slate-400 space-y-2 list-disc list-inside leading-relaxed">
+            <li>Parsed 10,000+ rows of operational bottleneck data using SQL joins and aggregations to detect process delays[cite: 1, 2].</li>
+            <li>Designed and deployed 2 interactive Power BI operational dashboards, accelerating weekly reporting speeds by 30%[cite: 1, 2].</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Matrix -->
+    <section id="skills" class="space-y-8">
+      <div class="border-b border-gold-400/20 pb-5">
+        <span class="text-xs font-mono uppercase tracking-widest text-gold-400">Toolkit</span>
+        <h2 class="text-3xl font-extrabold tracking-tight text-white mt-1">Core Competencies & Stack</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-gold p-6 rounded-2xl space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-gold-400/10 text-gold-300 flex items-center justify-center border border-gold-400/20">
+            <i data-lucide="database" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-base text-white">Relational Data & SQL</h3>
+          <ul class="text-xs font-mono text-slate-300 space-y-2">
+            <li>• Window Functions (RANK, DENSE_RANK)</li>
+            <li>• Common Table Expressions (CTEs)[cite: 1, 2]</li>
+            <li>• Multi-table Complex JOINS & Indexing[cite: 1, 2]</li>
+            <li>• MySQL, PostgreSQL, MS SQL Server[cite: 1, 2]</li>
+          </ul>
+        </div>
+
+        <div class="glass-gold p-6 rounded-2xl space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-gold-400/10 text-gold-300 flex items-center justify-center border border-gold-400/20">
+            <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-base text-white">BI & Visual Modeling</h3>
+          <ul class="text-xs font-mono text-slate-300 space-y-2">
+            <li>• Power BI (Star Schema Architecture)[cite: 1, 2]</li>
+            <li>• DAX Calculations & Time Intelligence[cite: 1, 2]</li>
+            <li>• Advanced Excel (Dynamic Slicers, XLOOKUP)[cite: 1]</li>
+            <li>• Power Query ETL Pipelines[cite: 1]</li>
+          </ul>
+        </div>
+
+        <div class="glass-gold p-6 rounded-2xl space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-gold-400/10 text-gold-300 flex items-center justify-center border border-gold-400/20">
+            <i data-lucide="cpu" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-base text-white">Programming & Domain</h3>
+          <ul class="text-xs font-mono text-slate-300 space-y-2">
+            <li>• Python (Pandas, NumPy, Seaborn EDA)[cite: 2]</li>
+            <li>• Retail E-Commerce SLA Tracking</li>
+            <li>• Customer Churn & Default Risk Diagnostics[cite: 1, 2]</li>
+            <li>• Process Automation & Cleaning[cite: 1, 2]</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terminal Emulation Component -->
+    <section class="glass-gold rounded-2xl overflow-hidden border border-gold-400/30">
+      <div class="bg-royal-950 px-5 py-3 border-b border-gold-400/20 flex items-center justify-between text-xs font-mono">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+          <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+          <span class="text-gold-300 ml-2">recruiter-console@yogesh-data:~</span>
+        </div>
+        <span class="text-slate-400">Interactive Query Terminal</span>
+      </div>
+      <div class="p-6 font-mono text-xs space-y-4">
+        <p class="text-slate-400">Execute candidate diagnostics by clicking commands below:</p>
+        <div class="flex flex-wrap gap-2.5">
+          <button onclick="runGoldCmd('degree')" class="px-3.5 py-1.5 rounded-lg bg-royal-850 hover:bg-royal-800 text-gold-300 border border-gold-400/30 transition">$ inspect academic-degree</button>
+          <button onclick="runGoldCmd('lowes')" class="px-3.5 py-1.5 rounded-lg bg-royal-850 hover:bg-royal-800 text-gold-300 border border-gold-400/30 transition">$ evaluate retail-ops</button>
+          <button onclick="runGoldCmd('availability')" class="px-3.5 py-1.5 rounded-lg bg-royal-850 hover:bg-royal-800 text-gold-300 border border-gold-400/30 transition">$ check availability</button>
+          <button onclick="runGoldCmd('clear')" class="px-3.5 py-1.5 rounded-lg bg-royal-900 text-slate-500 hover:text-slate-300 border border-white/5 transition">$ clear</button>
+        </div>
+        <div id="gold-terminal" class="p-4 rounded-xl bg-royal-950/80 border border-gold-400/20 text-slate-200 min-h-[90px] whitespace-pre-wrap leading-relaxed">
+          > System ready. Select an execution command above.
         </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="py-8 text-center text-xs font-mono text-slate-600 border-t border-slate-900">
-    Yogeshwaran P • Built with HTML & Tailwind • Hosted on GitHub Pages
+  <!-- Executive Footer -->
+  <footer class="border-t border-gold-400/20 py-12 text-center text-xs font-mono text-slate-400 space-y-2 bg-royal-950">
+    <p class="text-slate-300">Yogeshwaran P • Data & Business Intelligence Analyst</p>
+    <p>Bangalore, India • <a href="mailto:yogeshwaran.data@gmail.com" class="text-gold-400 hover:underline">yogeshwaran.data@gmail.com</a></p>
   </footer>
 
   <script>
     lucide.createIcons();
-    function showCmd(type) {
-      const out = document.getElementById('output');
-      if (type === 'skills') {
-        out.innerText = `> SKILLS:\n• SQL: MySQL, PostgreSQL, Window Functions, CTEs[cite: 1, 2]\n• BI: Power BI, Star Schema, DAX Measures, Excel[cite: 1, 2]\n• Scripting: Python (Pandas, NumPy, Seaborn)[cite: 2]`;
-      } else if (type === 'experience') {
-        out.innerText = `> EXPERIENCE:\n• Retail Operations & Analytics (Lowe's Account via 24-7.ai)\n• Handling operational tracking, queue SLA performance, and reporting automation.`;
-      } else if (type === 'contact') {
-        out.innerText = `> CONTACT:\n• Email: yogeshwaran.data@gmail.com\n• Location: Bangalore, India`;
+
+    function runGoldCmd(cmd) {
+      const out = document.getElementById('gold-terminal');
+      if (cmd === 'degree') {
+        out.innerText = `[ACADEMIC CREDENTIAL]:\n• B.Tech in Artificial Intelligence & Data Science[cite: 1, 2]\n• Institution: Karpagam Academy of Higher Education, Coimbatore[cite: 1, 2]\n• Graduated: March 2026\n• Core Competencies: Relational Databases, Statistics, Predictive Modeling, ETL[cite: 1, 2]`;
+      } else if (cmd === 'lowes') {
+        out.innerText = `[OPERATIONAL EXECUTION]:\n• Lowe's Home Improvement Queue via [24]7.ai (Bangalore)\n• Scope: 40+ daily customer workflows in fulfillment, delivery lag, returns\n• Business Insight: Root-cause identification of carrier shipping delays and KPI reporting automation`;
+      } else if (cmd === 'availability') {
+        out.innerText = `[RECRUITMENT STATUS]:\n• Target Roles: Junior Data Analyst, BI Analyst, Operations Analyst, MIS Specialist\n• Preferred Location: Bangalore (In-Office / Hybrid / Remote)\n• Notice: Immediate / Early Transition Available`;
+      } else if (cmd === 'clear') {
+        out.innerText = `> System ready. Select an execution command above.`;
       }
     }
   </script>
