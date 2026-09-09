@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yogeshwaran P | Data & BI Solutions Engineer</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            aurora: {
+              ivory: '#fcfaf6',
+              surface: '#ffffff',
+              border: '#f1e6d0',
+              goldLight: '#fef3c7',
+              gold: '#d97706',
+              goldDark: '#b45309',
+              slateText: '#0f172a',
+              muted: '#475569',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Kinetic Mesh & Architectural Glass Layering */
+    body {
+      background-color: #fbf9f5;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(251, 191, 36, 0.16) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(217, 119, 6, 0.10) 0px, transparent 50%),
+        radial-gradient(at 50% 100%, rgba(254, 243, 199, 0.40) 0px, transparent 55%);
+      background-attachment: fixed;
+    }
+
+    .bento-card {
+      background: rgba(255, 255, 255, 0.90);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(217, 119, 6, 0.22);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .bento-card:hover {
+      border-color: rgba(217, 119, 6, 0.60);
+      box-shadow: 0 20px 40px -15px rgba(180, 83, 9, 0.16);
+      transform: translateY(-3px);
+    }
+
+    .editorial-gradient {
+      background: linear-gradient(135deg, #0f172a 0%, #78350f 40%, #b45309 75%, #d97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gold-badge {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border: 1px solid rgba(217, 119, 6, 0.35);
+    }
+
+    .cursor-glow {
+      position: fixed;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Modal Styling */
+    .modal-backdrop {
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(8px);
+    }
+  </style>
+</head>
+
+<body class="text-aurora-slateText min-h-screen selection:bg-amber-400 selection:text-slate-950 antialiased font-sans relative">
+
+  <!-- Interactive Cursor Refraction Follower -->
+  <div id="glow-cursor" class="cursor-glow hidden md:block"></div>
+
+  <!-- Intro Screen Overlay (First Impression) -->
+  <div id="intro-curtain" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-all duration-700 pointer-events-auto">
+    <div class="space-y-4 text-center px-6 max-w-lg">
+      <div class="w-16 h-16 rounded-2xl gold-badge flex items-center justify-center mx-auto shadow-xl border border-amber-300">
+        <i data-lucide="sparkles" class="w-8 h-8 text-amber-600 animate-spin" style="animation-duration: 4s;"></i>
+      </div>
+      <h2 class="text-2xl font-bold tracking-tight text-slate-900 font-mono">YOGESHWARAN P</h2>
+      <p class="text-xs text-slate-500 font-mono uppercase tracking-widest">B.Tech AI & Data Science • Bangalore</p>
+      <div class="h-1.5 w-48 bg-slate-100 rounded-full mx-auto overflow-hidden">
+        <div id="progress-bar" class="h-full bg-gradient-to-r from-amber-400 to-amber-600 rounded-full w-0 transition-all duration-1000 ease-out"></div>
+      </div>
+      <p id="loader-text" class="text-[11px] font-mono text-amber-800">Initializing Executive BI Profile...</p>
+    </div>
+  </div>
+
+  <!-- Dynamic Glass Floating Header -->
+  <header class="fixed top-5 inset-x-0 z-50 flex justify-center px-4">
+    <nav class="bento-card rounded-full px-7 py-3 flex items-center gap-8 shadow-xl border border-amber-300/40">
+      <a href="#" class="font-mono font-bold text-sm tracking-wider text-amber-700">YP<span class="text-slate-950">.AI</span></a>
+      <div class="hidden md:flex items-center gap-7 text-xs font-bold tracking-wide text-slate-700">
+        <a href="#overview" class="hover:text-amber-700 transition">OVERVIEW</a>
+        <a href="#bento" class="hover:text-amber-700 transition">SYSTEM ARCHITECTURE</a>
+        <a href="#projects" class="hover:text-amber-700 transition">CASE STUDIES</a>
+        <a href="#experience" class="hover:text-amber-700 transition">ENTERPRISE OPS</a>
+      </div>
+      <a href="https://www.linkedin.com/in/yogeshwaran-analytics/" target="_blank" class="px-5 py-2 rounded-full bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-white font-bold text-xs tracking-wider uppercase transition shadow-md shadow-amber-600/20 flex items-center gap-1.5">
+        <i data-lucide="linkedin" class="w-3.5 h-3.5"></i> Connect
+      </a>
+    </nav>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-6xl mx-auto px-6 pt-32 pb-24 space-y-20 relative z-10">
+
+    <!-- Hero Section -->
+    <section id="overview" class="pt-6 flex flex-col md:flex-row items-center gap-12">
+      <div class="flex-1 space-y-6 text-center md:text-left">
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full gold-badge text-amber-900 text-xs font-mono font-bold">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>AVAILABLE IMMEDIATELY • BANGALORE (30 DAYS NOTICE)</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-[1.12] text-slate-950">
+          Deciphering Data Systems. <span class="editorial-gradient">Engineering Scalable BI.</span>
+        </h1>
+
+        <p class="text-slate-600 text-base sm:text-lg max-w-xl leading-relaxed">
+          B.Tech in Artificial Intelligence & Data Science[cite: 1, 2]. Blending high-concurrency retail operations (Lowe's account via [24]7.ai) with multi-dimensional SQL querying, Star Schema dimensional modeling, and predictive financial scoring[cite: 1, 2].
+        </p>
+
+        <!-- CTA Cluster -->
+        <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
+          <a href="#projects" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:opacity-95 text-white font-bold text-xs uppercase tracking-wider transition shadow-lg shadow-amber-600/25 flex items-center gap-2">
+            Inspect Curated Work <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+          </a>
+          <a href="https://github.com/YogeD333" target="_blank" class="px-6 py-3.5 rounded-xl bento-card hover:bg-amber-50 text-slate-900 font-semibold text-xs uppercase tracking-wider transition flex items-center gap-2 border border-amber-300">
+            <i data-lucide="github" class="w-4 h-4 text-amber-700"></i> Repositories
+          </a>
+          <button onclick="openModal()" class="px-6 py-3.5 rounded-xl bento-card hover:bg-amber-50 text-slate-900 font-semibold text-xs uppercase tracking-wider transition flex items-center gap-2 border border-amber-300">
+            <i data-lucide="file-check-2" class="w-4 h-4 text-amber-700"></i> View Snapshot
+          </button>
+        </div>
+      </div>
+
+      <!-- Hero Visual Framing -->
+      <div class="relative group flex-shrink-0">
+        <div class="absolute -inset-2 bg-gradient-to-tr from-amber-400 via-yellow-200 to-amber-600 rounded-3xl blur-lg opacity-70 group-hover:opacity-100 transition duration-700"></div>
+        <div class="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl overflow-hidden bg-white p-2.5 border-2 border-amber-400/80 shadow-2xl">
+          <img src="profile.jpeg" alt="Yogeshwaran P" class="w-full h-full object-cover rounded-xl" onerror="this.src='profile.jpg'"/>
+          <div class="absolute bottom-5 inset-x-5 bento-card p-3 rounded-xl border border-amber-300 text-center shadow-lg">
+            <p class="text-xs font-bold text-slate-950 font-sans tracking-wide">YOGESHWARAN P</p>
+            <p class="text-[10px] text-amber-800 font-mono font-bold uppercase mt-0.5">B.Tech AI & Data Science[cite: 1, 2]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento Grid Section: Executive Architecture -->
+    <section id="bento" class="space-y-6">
+      <div class="flex items-center justify-between border-b border-amber-200 pb-4">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-amber-700 font-bold">Profile Matrix</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950 mt-1">Operational & Analytical Blueprint</h2>
+        </div>
+        <span class="text-xs font-mono text-slate-400 hidden sm:block">VERSION 2026.4</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        
+        <!-- Bento 1: Lowe's Live Ops Experience (Span 2) -->
+        <div class="bento-card md:col-span-2 p-7 rounded-2xl flex flex-col justify-between space-y-4 border-l-4 border-l-amber-500">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded text-[11px] font-mono gold-badge text-amber-900 font-bold">Current Role</span>
+              <span class="text-xs font-mono text-slate-500 font-semibold">June 2026 – Present</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-950">Enterprise Retail Support & Process Analysis</h3>
+            <p class="text-xs text-amber-800 font-semibold">[24]7.ai • Lowe's Home Improvement Queue (Bangalore)</p>
+            <p class="text-xs text-slate-600 leading-relaxed pt-1">
+              Handling high-concurrency order fulfillment escalations, supply chain lag diagnostics, and return discrepancies across 40+ customer records daily. Built automated shift reporting trackers in Excel, reducing daily handover turnaround by 25%.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-2 text-[11px] font-mono text-slate-500">
+            <span class="flex items-center gap-1"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-600"></i> SLA Adherence</span>
+            <span class="flex items-center gap-1"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-600"></i> Root-Cause Auditing</span>
+          </div>
+        </div>
+
+        <!-- Bento 2: Core KPI Numbers -->
+        <div class="bento-card p-7 rounded-2xl flex flex-col justify-between text-center border-t-4 border-t-amber-500">
+          <span class="text-xs font-mono uppercase text-slate-500 font-bold">Volume Handled</span>
+          <p class="text-4xl font-extrabold text-amber-700 font-mono my-2">100K+</p>
+          <p class="text-xs text-slate-600 font-medium">Transactional records analyzed, joined, and cleaned across projects[cite: 1, 2].</p>
+        </div>
+
+        <!-- Bento 3: Degree -->
+        <div class="bento-card p-7 rounded-2xl flex flex-col justify-between border-t-4 border-t-amber-600">
+          <span class="text-xs font-mono uppercase text-slate-500 font-bold">Academic Base</span>
+          <div>
+            <p class="text-lg font-bold text-slate-950 leading-tight">B.Tech AI & Data Science[cite: 1, 2]</p>
+            <p class="text-xs text-slate-500 mt-1 font-mono">Karpagam Academy (Coimbatore)[cite: 1, 2]</p>
+          </div>
+          <span class="text-[11px] font-mono gold-badge px-2.5 py-1 rounded text-amber-900 font-bold mt-2 inline-block">Graduated March 2026</span>
+        </div>
+
+        <!-- Bento 4: SQL Competency -->
+        <div class="bento-card p-6 rounded-2xl space-y-3">
+          <div class="flex items-center gap-2 text-amber-700">
+            <i data-lucide="database" class="w-5 h-5"></i>
+            <h4 class="font-bold text-sm text-slate-950">Relational SQL</h4>
+          </div>
+          <ul class="text-xs font-mono text-slate-600 space-y-1.5">
+            <li>• CTEs & Subqueries[cite: 1, 2]</li>
+            <li>• Window Functions (RANK, DENSE_RANK)[cite: 1, 2]</li>
+            <li>• Multi-table Complex JOINS[cite: 1, 2]</li>
+            <li>• MySQL, PostgreSQL, MS SQL[cite: 1, 2]</li>
+          </ul>
+        </div>
+
+        <!-- Bento 5: Power BI Stack -->
+        <div class="bento-card p-6 rounded-2xl space-y-3">
+          <div class="flex items-center gap-2 text-amber-700">
+            <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+            <h4 class="font-bold text-sm text-slate-950">BI & Dashboards</h4>
+          </div>
+          <ul class="text-xs font-mono text-slate-600 space-y-1.5">
+            <li>• Star Schema Architecture[cite: 1, 2]</li>
+            <li>• DAX Calculations & Time Intel[cite: 1, 2]</li>
+            <li>• Dynamic Slicers & Tooltips[cite: 1]</li>
+            <li>• Power Query ETL Pipelines[cite: 1]</li>
+          </ul>
+        </div>
+
+        <!-- Bento 6: Python & Modeling -->
+        <div class="bento-card p-6 rounded-2xl space-y-3">
+          <div class="flex items-center gap-2 text-amber-700">
+            <i data-lucide="code" class="w-5 h-5"></i>
+            <h4 class="font-bold text-sm text-slate-950">Python & Analytics</h4>
+          </div>
+          <ul class="text-xs font-mono text-slate-600 space-y-1.5">
+            <li>• Pandas & NumPy Wrangling[cite: 2]</li>
+            <li>• Seaborn Correlation Matrices[cite: 2]</li>
+            <li>• Default Risk Segmentation[cite: 2]</li>
+            <li>• Missing Value Winsorization[cite: 2]</li>
+          </ul>
+        </div>
+
+        <!-- Bento 7: Turnaround Metric -->
+        <div class="bento-card p-7 rounded-2xl flex flex-col justify-between text-center border-t-4 border-t-amber-500">
+          <span class="text-xs font-mono uppercase text-slate-500 font-bold">Turnaround Gain</span>
+          <p class="text-4xl font-extrabold text-amber-700 font-mono my-2">30%</p>
+          <p class="text-xs text-slate-600 font-medium">Reduction in manual reporting time via Power BI & SQL automation[cite: 1, 2].</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Curated Projects Showcase (All Repos Live Linked) -->
+    <section id="projects" class="space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-amber-200 pb-4">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-amber-700 font-bold">Verified Portfolio</span>
+          <h2 class="text-3xl font-extrabold tracking-tight text-slate-950 mt-1">Featured Production Case Studies</h2>
+        </div>
+        <p class="text-xs text-slate-500 font-mono">1-CLICK GITHUB REPOSITORY VERIFICATION</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+
+        <!-- Case 1: Olist Power BI -->
+        <article class="bento-card rounded-2xl p-7 flex flex-col justify-between space-y-6 group">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded text-[11px] font-mono gold-badge text-amber-900 font-bold">Power BI Production[cite: 1, 2]</span>
+              <span class="px-2.5 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700 font-medium">Star Schema[cite: 1, 2]</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-950 group-hover:text-amber-700 transition">Olist E-Commerce Logistics & Revenue Dashboard</h3>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Constructed 8+ visual drill-down interfaces on 100K+ transaction lines[cite: 1, 2]. Engineered 12+ DAX measures evaluating freight cost ratios, seller performance distributions, and delivery delay correlations to expedite leadership reporting by 30%[cite: 1, 2].
+            </p>
+            <div class="p-3 bg-amber-50/60 rounded-xl border border-amber-200/50 space-y-1 text-xs text-slate-700 font-mono">
+              <p>• Data Model: Star Schema linking Orders, Payments, Customers, and Products[cite: 1, 2]</p>
+              <p>• Visuals: Delivery Lead Time Slicers, Monthly Gross Merchandise Value (GMV) Trends[cite: 1, 2]</p>
+            </div>
+          </div>
+          <div class="pt-2">
+            <a href="https://github.com/YogeD333/OLIST_ECOMMERCE_VISUALIZATION" target="_blank" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-mono text-xs font-bold text-center transition flex items-center justify-center gap-2 shadow-md shadow-amber-500/20">
+              Inspect Power BI Dashboard Repo <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Case 2: Olist SQL Analytics -->
+        <article class="bento-card rounded-2xl p-7 flex flex-col justify-between space-y-6 group">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded text-[11px] font-mono gold-badge text-amber-900 font-bold">SQL Pipeline[cite: 1, 2]</span>
+              <span class="px-2.5 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700 font-medium">Window Functions[cite: 1, 2]</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-950 group-hover:text-amber-700 transition">Olist E-Commerce Multi-Table Relational SQL Pipeline</h3>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Wrote performant SQL queries against 100K+ transactional order tables[cite: 1, 2]. Leveraged Common Table Expressions (CTEs), multi-table JOINs, and DENSE_RANK() to categorize seller revenue percentiles and isolate fulfillment bottlenecks[cite: 1, 2].
+            </p>
+            <div class="p-3 bg-amber-50/60 rounded-xl border border-amber-200/50 space-y-1 text-xs text-slate-700 font-mono">
+              <p>• Techniques: Rolling AOV calculation, DATEDIFF delivery performance grading[cite: 1, 2]</p>
+              <p>• Performance: Optimized indexing and subqueries to minimize query latency[cite: 1, 2]</p>
+            </div>
+          </div>
+          <div class="pt-2">
+            <a href="https://github.com/YogeD333/Olist-Ecommerce-Sql-project" target="_blank" class="w-full py-3 rounded-xl bg-slate-950 hover:bg-slate-800 text-white font-mono text-xs font-bold text-center transition flex items-center justify-center gap-2">
+              View Production SQL Queries <i data-lucide="code" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Case 3: Bank Loan Portfolio (Python) -->
+        <article class="bento-card rounded-2xl p-7 flex flex-col justify-between space-y-6 group">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded text-[11px] font-mono gold-badge text-amber-900 font-bold">Python Financial Risk[cite: 2]</span>
+              <span class="px-2.5 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700 font-medium">Pandas & Seaborn[cite: 2]</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-950 group-hover:text-amber-700 transition">Financial Loan Portfolio Default Risk Analysis</h3>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Conducted statistical Exploratory Data Analysis (EDA) on real-world banking credit records[cite: 2]. Quantified Good vs. Bad loan health ratios, handled missing categorical distributions, and correlated Debt-to-Income (DTI) exposure with default probability[cite: 2].
+            </p>
+            <div class="p-3 bg-amber-50/60 rounded-xl border border-amber-200/50 space-y-1 text-xs text-slate-700 font-mono">
+              <p>• Hygiene: Handled outlier clipping, IQR filtering, and categorical one-hot encoding[cite: 2]</p>
+              <p>• Visuals: Heatmaps of default likelihood correlated against homeownership brackets[cite: 2]</p>
+            </div>
+          </div>
+          <div class="pt-2">
+            <a href="https://github.com/YogeD333/Bank_Loan_Analysis" target="_blank" class="w-full py-3 rounded-xl bg-slate-950 hover:bg-slate-800 text-white font-mono text-xs font-bold text-center transition flex items-center justify-center gap-2">
+              Inspect Jupyter Notebook Repo <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Case 4: Coffee Sales Comparative Modeling -->
+        <article class="bento-card rounded-2xl p-7 flex flex-col justify-between space-y-6 group">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded text-[11px] font-mono gold-badge text-amber-900 font-bold">Advanced Excel[cite: 1]</span>
+              <span class="px-2.5 py-0.5 rounded text-[11px] font-mono bg-slate-100 text-slate-700 font-medium">Variance & Dynamic Modeling[cite: 1]</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-950 group-hover:text-amber-700 transition">Multi-Region Sales Variance & Margin Analysis Model</h3>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Built dynamic reporting workbooks using XLOOKUP, INDEX-MATCH, nested logical conditions, and timeline slicers to evaluate cross-region revenue variances, order sizes, and margin contributions[cite: 1].
+            </p>
+            <div class="p-3 bg-amber-50/60 rounded-xl border border-amber-200/50 space-y-1 text-xs text-slate-700 font-mono">
+              <p>• Modeling: Pivot Tables with dynamic calculated fields and conditional formatting[cite: 1]</p>
+              <p>• Logic: Automated monthly transaction registers and inventory reconciliation</p>
+            </div>
+          </div>
+          <div class="pt-2">
+            <a href="https://github.com/YogeD333/Coffee-Sales-Comparision" target="_blank" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-mono text-xs font-bold text-center transition flex items-center justify-center gap-2 shadow-md shadow-amber-500/20">
+              View Comparative Model Repo <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Professional Experience Timeline -->
+    <section id="experience" class="space-y-8">
+      <div class="border-b border-amber-200 pb-4">
+        <span class="text-xs font-mono uppercase tracking-widest text-amber-700 font-bold">Work History</span>
+        <h2 class="text-3xl font-extrabold tracking-tight text-slate-950 mt-1">Operational & Analytical Experience</h2>
+      </div>
+
+      <div class="space-y-6">
+        <!-- 24/7.ai Experience -->
+        <div class="bento-card p-8 rounded-2xl space-y-4 border-l-4 border-l-amber-500">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+            <h3 class="text-xl font-bold text-slate-950">Retail Operations & Process Analyst (Lowe's Account)</h3>
+            <span class="text-xs font-mono text-amber-900 gold-badge px-3 py-1 rounded-full font-bold">June 2026 – Present • 30 Days Notice</span>
+          </div>
+          <p class="text-xs font-bold text-slate-500 font-mono">[24]7.ai • Bangalore, India</p>
+          <ul class="text-xs sm:text-sm text-slate-600 space-y-2.5 list-disc list-inside leading-relaxed">
+            <li>Manage end-to-end resolution logistics for 40+ complex customer fulfillment, supply chain exceptions, and delivery delay incidents per shift.</li>
+            <li>Monitor queue performance metrics (First Contact Resolution, AHT, SLA adherence) and detect recurring supply chain friction points.</li>
+            <li>Built and deployed automated shift reporting trackers in Excel, cutting daily manual compilation turnaround by 25%.</li>
+          </ul>
+        </div>
+
+        <!-- Prime Solutions -->
+        <div class="bento-card p-8 rounded-2xl space-y-4 border-l-4 border-l-amber-600">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+            <h3 class="text-xl font-bold text-slate-950">Data Analyst Intern</h3>
+            <span class="text-xs font-mono text-amber-900 gold-badge px-3 py-1 rounded-full font-bold">Oct 2024 – Nov 2024[cite: 1, 2]</span>
+          </div>
+          <p class="text-xs font-bold text-slate-500 font-mono">Prime Solutions • Coimbatore, India[cite: 1, 2]</p>
+          <ul class="text-xs sm:text-sm text-slate-600 space-y-2.5 list-disc list-inside leading-relaxed">
+            <li>Queried 10,000+ rows of operational bottleneck data using SQL joins and aggregations to detect process delays[cite: 1, 2].</li>
+            <li>Designed and deployed 2 interactive Power BI operational dashboards, accelerating weekly reporting speeds by 30%[cite: 1, 2].</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive AI Terminal Emulator -->
+    <section class="bento-card rounded-2xl overflow-hidden border border-amber-300">
+      <div class="bg-slate-950 px-5 py-3 border-b border-amber-400/30 flex items-center justify-between text-xs font-mono">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+          <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+          <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+          <span class="text-amber-300 ml-2">recruiter-eval@yogesh-data:~</span>
+        </div>
+        <span class="text-slate-400">Executive Diagnostics Console</span>
+      </div>
+      <div class="p-6 font-mono text-xs space-y-4 bg-white">
+        <p class="text-slate-600">Click a command button to run instantaneous candidate validations:</p>
+        <div class="flex flex-wrap gap-2.5">
+          <button onclick="runConsole('status')" class="px-3.5 py-1.5 rounded-lg gold-badge hover:bg-amber-200 text-amber-950 font-bold transition">$ query hiring-status</button>
+          <button onclick="runConsole('degree')" class="px-3.5 py-1.5 rounded-lg gold-badge hover:bg-amber-200 text-amber-950 font-bold transition">$ inspect academic-degree</button>
+          <button onclick="runConsole('lowes')" class="px-3.5 py-1.5 rounded-lg gold-badge hover:bg-amber-200 text-amber-950 font-bold transition">$ evaluate retail-ops</button>
+          <button onclick="runConsole('clear')" class="px-3.5 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition">$ clear</button>
+        </div>
+        <div id="terminal-out" class="p-4 rounded-xl bg-slate-950 text-amber-300 min-h-[95px] whitespace-pre-wrap leading-relaxed shadow-inner">
+          > System initialized. Ready for recruiter command input.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive Quick-Look Modal -->
+  <div id="quick-modal" class="fixed inset-0 z-50 modal-backdrop hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl border border-amber-300 animate-in fade-in zoom-in-95 duration-200">
+      <div class="flex items-center justify-between border-b pb-3">
+        <h3 class="font-bold text-slate-950 text-sm font-mono flex items-center gap-2">
+          <i data-lucide="file-text" class="w-4 h-4 text-amber-700"></i> Executive Profile Card
+        </h3>
+        <button onclick="closeModal()" class="text-slate-400 hover:text-slate-700">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="space-y-3 text-xs text-slate-600">
+        <p><strong>Candidate:</strong> Yogeshwaran P</p>
+        <p><strong>Location:</strong> Bangalore, India (Immediate In-Person / Hybrid)</p>
+        <p><strong>Degree:</strong> B.Tech in Artificial Intelligence & Data Science[cite: 1, 2]</p>
+        <p><strong>Notice Period:</strong> 30 Days (Officially Verified)</p>
+        <p><strong>Top Competencies:</strong> SQL (CTEs, Window Functions), Power BI (Star Schema, DAX), Advanced Excel, Python EDA[cite: 1, 2]</p>
+        <p><strong>Contact:</strong> yogeshwaran.data@gmail.com | +91 7708871533[cite: 1, 2]</p>
+      </div>
+      <div class="pt-2 flex justify-end">
+        <button onclick="closeModal()" class="px-4 py-2 rounded-lg bg-slate-950 text-white font-mono text-xs font-bold hover:bg-slate-800">
+          Close Snapshot
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Executive Footer -->
+  <footer class="border-t border-amber-200 py-12 text-center text-xs font-mono text-slate-600 space-y-2 bg-white/60">
+    <p class="text-slate-900 font-bold">Yogeshwaran P • Data & Business Intelligence Analyst</p>
+    <p>Bangalore, India • <a href="mailto:yogeshwaran.data@gmail.com" class="text-amber-700 font-bold hover:underline">yogeshwaran.data@gmail.com</a> • 30 Days Notice</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    // Intro Screen Logic (Smoothest UX Reveal)
+    window.addEventListener('load', () => {
+      const bar = document.getElementById('progress-bar');
+      const curtain = document.getElementById('intro-curtain');
+      bar.style.width = '100%';
+      setTimeout(() => {
+        curtain.style.opacity = '0';
+        setTimeout(() => {
+          curtain.style.display = 'none';
+        }, 700);
+      }, 900);
+    });
+
+    // Subtle Cursor Light Refraction
+    const cursor = document.getElementById('glow-cursor');
+    window.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    // Recruiter Terminal Diagnostics
+    function runConsole(cmd) {
+      const out = document.getElementById('terminal-out');
+      if (cmd === 'status') {
+        out.innerText = `[RECRUITMENT STATUS]:\n• Immediate Target: Junior Data Analyst, BI Analyst, Operations Analyst\n• Location: Bangalore, Karnataka (Open to In-Office / Hybrid)\n• Current Notice Period: 30 Days (Officially Verified)\n• Contact: yogeshwaran.data@gmail.com | +91 7708871533[cite: 1, 2]`;
+      } else if (cmd === 'degree') {
+        out.innerText = `[ACADEMIC CREDENTIAL]:\n• Degree: B.Tech in Artificial Intelligence & Data Science[cite: 1, 2]\n• Institution: Karpagam Academy of Higher Education, Coimbatore[cite: 1, 2]\n• Graduated: March 2026\n• Core Foundation: Relational Databases, Applied Statistics, Predictive Analytics, ETL[cite: 1, 2]`;
+      } else if (cmd === 'lowes') {
+        out.innerText = `[ENTERPRISE OPERATIONS]:\n• Organization: [24]7.ai (Lowe's Home Improvement Queue)\n• Volume: 40+ customer logistical workflows resolved per shift\n• Value Delivered: Automated operational Excel shift tracking and isolated shipping delay friction points.`;
+      } else if (cmd === 'clear') {
+        out.innerText = `> System initialized. Ready for recruiter command input.`;
+      }
+    }
+
+    // Modal Triggers
+    function openModal() {
+      document.getElementById('quick-modal').classList.remove('hidden');
+      document.getElementById('quick-modal').classList.add('flex');
+    }
+    function closeModal() {
+      document.getElementById('quick-modal').classList.add('hidden');
+      document.getElementById('quick-modal').classList.remove('flex');
+    }
+  </script>
+</body>
+</html>
